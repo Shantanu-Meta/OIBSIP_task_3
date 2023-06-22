@@ -1,30 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-size: 1.5rem;
+  min-height: 200vh;
+}
+.outer-container {
+  border: 2px dashed black;
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  position: relative;
+}
+.inner-container {
+  border: 2px solid blue;
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+  /* position: relative; */
+}
+.box {
+  width: 150px;
+  height: 150px;
+  color: white;
+  padding: 1rem;
+}
+.absolute {
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.relative {
+  background: #f00;
+  position: relative;
+  top: 0px;
+  left: 200px;
 }
 
-.coloums {
-  /* column-count: 4; */
-  /* column-width: 250px;  */
-  columns: 4 250px;
-  column-rule: 2px solid black;
-  column-gap: 3rem;
+.fixed {
+  background: green;
+  position: fixed;
+  top: 100px;
+  left: 200px;
 }
-.coloums p {
-  margin-top: 0;
-  /* removes the top margin */
-}
-
-.coloums h2 {
-  background: grey;
-  padding: 5px;
-  color: #fff;
-  break-inside: avoid;
+.sticky {
+  background: gold;
+  position: sticky;
+  top: 0;
 }
 
-.coloums .quote {
-  color: blue;
+/* 2nd part of positioning */
+
+section {
+  height: 100vh;
 }
-#nowarp {
-  white-space: nowrap;
-  /* If we want to stick a span in same line always.  */
+.blue {
+  background: blue;
+}
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+header,
+footer {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  height: 100px;
+}
+
+header {
+  position: sticky;
+  top: 40px;
+}
+footer {
+  background: violet;
+  position: sticky;
+  bottom: 0;
+}
+a:visited {
+  color: black;
+}
+a:focus {
+  color: blueviolet;
+}
+.social {
+  background: cornflowerblue;
+  color: #ffffff;
+  width: 55px;
+  height: 25px;
+  position: fixed;
+  top: 40px;
+  z-index: 1;
+  cursor: pointer;
 }
