@@ -1,34 +1,30 @@
-* {
-  /* margin: 0;
-  padding: 0;*/
-  box-sizing: border-box;
-}
 body {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
-.block {
-  width: 30vw;
-  height: 30vw;
-  background-color: gold;
-  padding: 1rem;
-  /* float: left; */
+.coloums {
+  /* column-count: 4; */
+  /* column-width: 250px;  */
+  columns: 4 250px;
+  column-rule: 2px solid black;
+  column-gap: 3rem;
 }
-.left {
-  float: left;
-  margin: 0 10px 10px 0;
-}
-.right {
-  float: right;
-  margin: 0 0 10px 10px;
+.coloums p {
+  margin-top: 0;
+  /* removes the top margin */
 }
 
-.clear {
-  clear: both;
+.coloums h2 {
+  background: grey;
+  padding: 5px;
+  color: #fff;
+  break-inside: avoid;
 }
-section {
-  background: lightgreen;
-  border: 2px solid black;
-  padding: 1.1rem;
-  display: flow-root;
+
+.coloums .quote {
+  color: blue;
+}
+#nowarp {
+  white-space: nowrap;
+  /* If we want to stick a span in same line always.  */
 }
