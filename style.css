@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  margin: 0.5rem;
+}
+ul a {
+  text-decoration: none;
+  display: block;
+}
+nav {
+  border: 2px solid black;
+  border-radius: 2rem;
+  max-width: 400px;
+  min-width: 200px;
+  margin: 0 auto 1rem;
+  font-size: 2rem;
+  line-height: 7rem;
+}
+
+h2 {
+  background: gold;
+  border-radius: 2rem 2rem 0 0;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  border-top: 1px solid black;
+}
+li:nth-child(4) a {
+  border-radius: 0 0 2rem 2rem;
+}
+
+li a:hover {
+  background: lightgreen;
+  color: black;
+  cursor: pointer;
+}
