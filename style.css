@@ -3,70 +3,95 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* UTILITY class */
+.nowrap {
+  white-space: nowrap;
+}
+
 body {
   min-height: 100vh;
   font-size: 1.5rem;
-  background-color: steelblue;
-  background-image: radial-gradient(white, steelblue);
+  background-color: rgb(112, 119, 124);
+  background-image: radial-gradient(white, rgb(112, 119, 124));
   display: flex;
   flex-direction: column;
 }
 
 header,
-footer,
-main,
-nav {
-  display: grid;
-  grid-template-columns: 100%;
-  place-content: center;
-  text-align: center;
-}
-header,
 footer {
   position: sticky;
-  background-color: #03244b;
-  color: white;
+  background-color: rgb(0, 49, 88);
+  color: whitesmoke;
+  font-size: 1rem;
+  text-align: center;
+  padding: 3px 0;
 }
 header {
   top: 0;
 }
 footer {
   bottom: 0;
+  font-size: 0.8rem;
+}
+
+nav {
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  padding: 5px;
+  font-weight: bolder;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 49, 88);
 }
 
 main {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-nav {
-  background: #ffff;
-  color: #03244b;
-  border-bottom: 2px solid #03244b;
+.card {
+  background-color: rgb(0, 49, 88);
+  width: min(80%, 350px);
+  margin: 25px auto;
+  padding: 15px;
+  text-align: center;
+  scroll-margin-top: 6rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
-/* 1st media queries */
+.card img {
+  border: 5px double white;
+  border-radius: 50%;
+}
 
-@media screen and (min-width: 576px) {
-  body {
-    background-color: lightcoral;
-    background-image: radial-gradient(white, lightcoral);
-  }
+.card figcaption {
+  margin: 8px 0;
+  font-size: 2rem;
+  font-weight: bolder;
 }
-@media screen and (min-width: 880px) {
-  body {
-    background-color: dodgerblue;
-    background-image: radial-gradient(white, dodgerblue);
-  }
-}
-@media screen and (min-width: 1000px) {
-  body {
-    background-color: rebeccapurple;
-    background-image: radial-gradient(white, rebeccapurple);
-  }
-}
-@media screen and (min-width: 1200px) {
-  body {
-    background-color: lightgreen;
-    background-image: radial-gradient(white, lightgreen);
-  }
-}
+
+/* Medi queries */
+@media screen and (min-);
