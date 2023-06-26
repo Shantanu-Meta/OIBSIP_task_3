@@ -5,60 +5,48 @@
 }
 body {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(9, 2fr);
-  grid-template-rows: 75px;
-  grid-template-areas:
-    "hd hd hd hd hd hd hd hd hd"
-    "mn mn mn mn mn mn mn sd sd"
-    "ft ft ft ft ft ft ft ft ft";
-  gap: 1rem;
 }
 
-.el {
-  background: blue;
-  color: white;
-  display: grid;
-  place-content: center;
-}
-.header {
-  background: gold;
-  grid-area: hd;
-}
-.footer {
-  grid-area: ft;
-}
-.sidebar {
-  background: lightcoral;
-  grid-area: sd;
+.main {
+  padding: 20px;
+  border: 2px solid #000000;
+  max-width: 90%;
+  height: 80%;
+  margin: 10px auto;
+  border-radius: 45px 0 45px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/339/179/774/digital-art-low-poly-artwork-minimalism-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.box {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 0.5rem;
-  font-size: 2rem;
+.profile-pic-left {
+  width: 30%;
+}
+.profile-pic-left img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border-radius: 50%;
+  border: 1px double #000;
+  object-fit: cover;
+  box-shadow: 5px 5px 16px black;
 }
 
-.container {
-  grid-area: mn;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr 80px);
-  grid-template-rows: minmax(750px, auto);
-  gap: 0.2em;
+.h1 {
+  font-size: 3rem;
+  color: whitesmoke;
+  /* -webkit-background-clip: text;
+  color: transparent; */
+  text-shadow: 2px 2px 5px black;
+  background-color: rgba(0, 0, 0, 0.123);
+  padding: 45px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 16px black;
 }
-
-.box:first-child {
-  background: green;
-  grid-column: 1/3; /*Short Hand property*/
-
-  grid-row-start: 1;
-  grid-row-end: 4;
-
-  display: grid;
-  place-content: center;
-}
-.box:nth-child(2) {
-  background: purple;
-  grid-row: 1/4;
+.nowrap {
+  white-space: nowrap;
 }
