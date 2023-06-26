@@ -5,48 +5,68 @@
 }
 body {
   min-height: 100vh;
-}
-
-.main {
-  padding: 20px;
-  border: 2px solid #000000;
-  max-width: 90%;
-  height: 80%;
-  margin: 10px auto;
-  border-radius: 45px 0 45px 0;
+  font-size: 1.5rem;
+  background-color: steelblue;
+  background-image: radial-gradient(white, steelblue);
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 3rem;
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/339/179/774/digital-art-low-poly-artwork-minimalism-wallpaper-preview.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  flex-direction: column;
 }
 
-.profile-pic-left {
-  width: 30%;
+header,
+footer,
+main,
+nav {
+  display: grid;
+  grid-template-columns: 100%;
+  place-content: center;
+  text-align: center;
 }
-.profile-pic-left img {
-  width: 100%;
-  height: auto;
-  min-width: 100px;
-  border-radius: 50%;
-  border: 1px double #000;
-  object-fit: cover;
-  box-shadow: 5px 5px 16px black;
+header,
+footer {
+  position: sticky;
+  background-color: #03244b;
+  color: white;
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
 }
 
-.h1 {
-  font-size: 3rem;
-  color: whitesmoke;
-  /* -webkit-background-clip: text;
-  color: transparent; */
-  text-shadow: 2px 2px 5px black;
-  background-color: rgba(0, 0, 0, 0.123);
-  padding: 45px;
-  border-radius: 40px;
-  box-shadow: 5px 5px 16px black;
+main {
+  flex-grow: 1;
 }
-.nowrap {
-  white-space: nowrap;
+
+nav {
+  background: #ffff;
+  color: #03244b;
+  border-bottom: 2px solid #03244b;
+}
+
+/* 1st media queries */
+
+@media screen and (min-width: 576px) {
+  body {
+    background-color: lightcoral;
+    background-image: radial-gradient(white, lightcoral);
+  }
+}
+@media screen and (min-width: 880px) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(white, dodgerblue);
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: rebeccapurple;
+    background-image: radial-gradient(white, rebeccapurple);
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: lightgreen;
+    background-image: radial-gradient(white, lightgreen);
+  }
 }
