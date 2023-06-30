@@ -1,180 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Alice&family=Assistant:wght@500&family=Kalam:wght@300&family=Poppins:wght@300&display=swap");
-
-:root {
-  --PRIMARY-BLUE: rgb(0, 49, 88);
-  --PRIMARY-BG-GREY: rgb(112, 119, 124);
-  --PRIMARY-TEXT: white;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--PRIMARY-TEXT);
-  /* font-family: "Alice", serif;
-  font-family: "Assistant", sans-serif;
-  font-family: "Kalam", cursive; */
-  font-family: "Poppins", sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
-img {
-  display: block;
-  max-width: 80%;
-  height: auto;
-  margin: auto;
-}
-
-/* UTILITY class */
-.nowrap {
-  white-space: nowrap;
-}
-
 body {
-  min-height: 100vh;
+  height: 100vh;
+  background-color: cornflowerblue;
+  background-image: radial-gradient(white, orange);
   font-size: 1.5rem;
-  background-color: var(--PRIMARY-BG-GREY);
-  background-image: radial-gradient(
-    var(--PRIMARY-TEXT),
-    var(--PRIMARY-BG-GREY)
-  );
-  display: flex;
-  flex-direction: column;
 }
-
-header,
-footer {
+h1 {
+  background-color: blue;
+  color: white;
   position: sticky;
-  width: 100%;
-  background-color: var(--PRIMARY-BLUE);
-  color: whitesmoke;
-  font-size: 1rem;
-  text-align: center;
-  padding: 3px 0;
-}
-header {
-  top: 0;
-}
-footer {
-  bottom: 0;
-  font-size: 0.8rem;
-}
-
-nav {
-  background-color: var(--PRIMARY-TEXT);
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 1.2rem;
-  padding: 5px;
-  font-weight: bolder;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--PRIMARY-BLUE);
-}
-
-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.card {
-  background-color: var(--PRIMARY-BLUE);
-  width: min(90%, 350px);
-  margin: 25px auto;
-  padding: 15px;
-  text-align: center;
-  scroll-margin-top: 6rem;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  box-shadow: 0 2px 5px black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  color: var(--PRIMARY-TEXT);
-}
-
-.card:target {
-  border: 2px solid rgb(11, 8, 54);
-}
-
-.card img {
-  border: 5px double var(--PRIMARY-TEXT);
-  border-radius: 50%;
-}
-/* This check if we forgot alt attribute in any image or not (:not) pesudo class */
-/* .card img:not([alt]) {
-  border: 10px solid red;
-} */
-
-.card figcaption {
-  margin: 8px 0;
-  font-size: 2rem;
-  font-weight: bolder;
-}
-.card figcaption::first-letter {
-  font-size: 3rem;
-}
-
-/* Media queries */
-
-@media screen and (min-width: 576px) {
-  main {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: min(90%, 400px);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  main {
-    align-items: stretch;
-  }
-  .card {
-    width: min(90%, 325px);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .card {
-    width: min(90%, 300px);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .card {
-    width: min(calc(31%-1rem), 500px);
-    height: auto;
-  }
-}
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-  main {
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    /* align-content: center; */
-    align-items: stretch;
-  }
-  .card {
-    width: min(calc(33%-0.25rem), 200px);
-    height: auto;
-    font-size: 1rem;
-  }
-  .card figcaption {
-    font-size: 1.25rem;
-  }
-  p {
-    letter-spacing: 1.22px;
-  }
-  nav {
-    display: none;
-  }
+  top: 100px;
 }
