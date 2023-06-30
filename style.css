@@ -1,7 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Assistant:wght@500&family=Kalam:wght@300&family=Poppins:wght@300&display=swap");
+
+:root {
+  --PRIMARY-BLUE: rgb(0, 49, 88);
+  --PRIMARY-BG-GREY: rgb(112, 119, 124);
+  --PRIMARY-TEXT: white;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--PRIMARY-TEXT);
+  /* font-family: "Alice", serif;
+  font-family: "Assistant", sans-serif;
+  font-family: "Kalam", cursive; */
+  font-family: "Poppins", sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -21,8 +34,11 @@ img {
 body {
   min-height: 100vh;
   font-size: 1.5rem;
-  background-color: rgb(112, 119, 124);
-  background-image: radial-gradient(white, rgb(112, 119, 124));
+  background-color: var(--PRIMARY-BG-GREY);
+  background-image: radial-gradient(
+    var(--PRIMARY-TEXT),
+    var(--PRIMARY-BG-GREY)
+  );
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +47,7 @@ header,
 footer {
   position: sticky;
   width: 100%;
-  background-color: rgb(0, 49, 88);
+  background-color: var(--PRIMARY-BLUE);
   color: whitesmoke;
   font-size: 1rem;
   text-align: center;
@@ -46,7 +62,7 @@ footer {
 }
 
 nav {
-  background: white;
+  background-color: var(--PRIMARY-TEXT);
   display: flex;
   justify-content: space-evenly;
   font-size: 1.2rem;
@@ -56,7 +72,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: rgb(0, 49, 88);
+  color: var(--PRIMARY-BLUE);
 }
 
 main {
@@ -68,7 +84,7 @@ main {
 }
 
 .card {
-  background-color: rgb(0, 49, 88);
+  background-color: var(--PRIMARY-BLUE);
   width: min(90%, 350px);
   margin: 25px auto;
   padding: 15px;
@@ -81,18 +97,29 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  color: white;
+  color: var(--PRIMARY-TEXT);
+}
+
+.card:target {
+  border: 2px solid rgb(11, 8, 54);
 }
 
 .card img {
-  border: 5px double white;
+  border: 5px double var(--PRIMARY-TEXT);
   border-radius: 50%;
 }
+/* This check if we forgot alt attribute in any image or not (:not) pesudo class */
+/* .card img:not([alt]) {
+  border: 10px solid red;
+} */
 
 .card figcaption {
   margin: 8px 0;
   font-size: 2rem;
   font-weight: bolder;
+}
+.card figcaption::first-letter {
+  font-size: 3rem;
 }
 
 /* Media queries */
@@ -114,7 +141,6 @@ main {
   }
   .card {
     width: min(90%, 325px);
-    height: min(380px, 400px);
   }
 }
 
